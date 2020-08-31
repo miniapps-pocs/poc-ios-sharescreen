@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShareScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6g1-1A-aZQ">
+                                <rect key="frame" x="0.0" y="86" width="375" height="726"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gIu-ip-fyi">
+                                <rect key="frame" x="8" y="44" width="359" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRC-1r-iUv">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jf-RR-SLP">
+                                        <rect key="frame" x="302" y="0.0" width="30" height="34"/>
+                                        <state key="normal" title="Go">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="gotoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2aX-n3-la3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5S-7t-ci5">
+                                        <rect key="frame" x="340" y="0.0" width="19" height="34"/>
+                                        <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                                        <connections>
+                                            <action selector="shareTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zul-XS-tWe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gIu-ip-fyi" secondAttribute="trailing" constant="8" id="Iu5-Dv-FM0"/>
+                            <constraint firstAttribute="bottom" secondItem="6g1-1A-aZQ" secondAttribute="bottom" id="KbU-oJ-jOd"/>
+                            <constraint firstItem="gIu-ip-fyi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OB3-xt-FDr"/>
+                            <constraint firstItem="6g1-1A-aZQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rtp-Un-NjQ"/>
+                            <constraint firstItem="gIu-ip-fyi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Vw4-bu-wPE"/>
+                            <constraint firstAttribute="trailing" secondItem="6g1-1A-aZQ" secondAttribute="trailing" id="fsX-jD-zVn"/>
+                            <constraint firstItem="6g1-1A-aZQ" firstAttribute="top" secondItem="gIu-ip-fyi" secondAttribute="bottom" constant="8" id="mcF-8Z-VrH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="KbU-oJ-jOd" id="1Di-sI-aGi"/>
+                        <outlet property="gotoButton" destination="8jf-RR-SLP" id="ets-R2-aK3"/>
+                        <outlet property="shareButton" destination="b5S-7t-ci5" id="c7F-Ay-6Gc"/>
+                        <outlet property="urlTextField" destination="aRC-1r-iUv" id="inu-kN-Gao"/>
+                        <outlet property="webView" destination="6g1-1A-aZQ" id="w8c-qR-Zzt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
+</document>
